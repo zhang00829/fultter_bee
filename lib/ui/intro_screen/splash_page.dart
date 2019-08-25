@@ -1,5 +1,5 @@
 import 'package:Bee/common/common.dart';
-import 'package:Bee/ui/index/index.dart';
+import 'package:Bee/ui/login/login_page.dart';
 import 'package:Bee/utils/navigate_service.dart';
 import 'package:Bee/utils/service_locator.dart';
 import 'package:Bee/utils/utils.dart';
@@ -60,21 +60,19 @@ class _SplashPageState extends State<SplashPage> {
 
   void _goLogin() {
     getIt<NavigateService>().pushAndRemoveUntil(
-        MaterialPageRoute(builder: (_) => Index()), (route) => route == null);
+        MaterialPageRoute(builder: (_) => LoginPage()), (route) => route == null);
   }
 
   void onDonePress() {
-    toIndex();
+    _goLogin();
   }
 
   void onSkipPress() {
-    toIndex();
+    _goLogin();
   }
 
-  void toIndex() {
-    getIt<NavigateService>().pushAndRemoveUntil(
-        MaterialPageRoute(builder: (_) => Index()), (route) => route == null);
-  }
+
+
 
   @override
   Widget build(BuildContext context) {

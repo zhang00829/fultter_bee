@@ -18,7 +18,20 @@ dependencies:
   get_it: 2.0.1
   flustars: 0.2.6+1
   common_utils: 1.1.3
-
+  keyboard_actions: 2.1.2
+  dio:
+  cached_network_image:
+  url_launcher:
+  barcode_scan:
+  oktoast:
+  redux:
+  flutter_redux:
+  redux_thunk:
+  redux_persist_flutter:
+  reselect:
+  flutter_redux_dev_tools:
+  sprintf:
+  rxdart:
 
 dev_dependencies:
   flutter_test:
@@ -39,4 +52,5 @@ flutter:
   assets:
     - assets/images/
     - assets/images/intro_screen/
+    - assets/images/login/
 
