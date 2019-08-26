@@ -1,4 +1,9 @@
 import 'package:Bee/common/common.dart';
+import 'package:Bee/model/login_model.dart';
+import 'package:Bee/net/net.dart';
+import 'package:Bee/redux/app_state.dart';
+import 'package:Bee/redux/login/login_action.dart';
+import 'package:Bee/redux/login/login_middleware.dart';
 import 'package:Bee/res/colors.dart';
 import 'package:Bee/res/styles.dart';
 import 'package:Bee/ui/login/register_page.dart';
@@ -12,6 +17,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flustars/flustars.dart' as FlutterStars;
+import 'package:flutter_redux/flutter_redux.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
 class LoginPage extends StatefulWidget {
@@ -56,8 +62,6 @@ class _LoginPageState extends State<LoginPage> {
       });
     }
   }
-
-  void _login() {}
 
   @override
   Widget build(BuildContext context) {
@@ -108,9 +112,18 @@ class _LoginPageState extends State<LoginPage> {
           ),
           Gaps.vGap10,
           Gaps.vGap15,
-          MyButton(
-            onPressed: _isClick ? _login : null,
-            text: "登录",
+          StoreConnector<AppState, VoidCallback>(
+            converter: (store) {
+              return () {
+                store.dispatch(ajaxLogin());
+              };
+            },
+            builder: (context, callback) {
+              return MyButton(
+                onPressed: _isClick ? callback : null,
+                text: "登录",
+              );
+            },
           ),
           Container(
             height: 40.0,

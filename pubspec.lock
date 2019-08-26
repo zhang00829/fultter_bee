@@ -118,13 +118,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.5.3"
-  flutter_redux_dev_tools:
-    dependency: "direct main"
-    description:
-      name: flutter_redux_dev_tools
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.3.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -256,6 +249,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.8.2"
+  redux_remote_devtools:
+    dependency: "direct main"
+    description:
+      name: redux_remote_devtools
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.0.9"
   redux_thunk:
     dependency: "direct main"
     description:
@@ -270,13 +270,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.4.0"
-  rxdart:
-    dependency: "direct main"
-    description:
-      name: rxdart
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.22.1+1"
   shared_preferences:
     dependency: transitive
     description:
@@ -289,6 +282,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  socketcluster_client:
+    dependency: transitive
+    description:
+      name: socketcluster_client
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.0.3"
   source_span:
     dependency: transitive
     description:

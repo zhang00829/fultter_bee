@@ -24,14 +24,13 @@ dependencies:
   url_launcher:
   barcode_scan:
   oktoast:
+  sprintf:
   redux:
   flutter_redux:
   redux_thunk:
   redux_persist_flutter:
   reselect:
-  flutter_redux_dev_tools:
-  sprintf:
-  rxdart:
+  redux_remote_devtools:
 
 dev_dependencies:
   flutter_test:
