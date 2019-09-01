@@ -8,4 +8,8 @@ class AppState {
   factory AppState.initial() {
     return AppState(LoginState.initial());
   }
+
+  toJson() {
+    return {'loginState': loginState.toJson()};
+  }
 }

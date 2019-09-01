@@ -10,4 +10,7 @@ class LoginState{
   factory LoginState.initial(){
     return LoginState(null,null);
   }
+  toJson(){
+    return {'loginModel':loginModel.toJson(),'numController':numController.toString()};
+  }
 }

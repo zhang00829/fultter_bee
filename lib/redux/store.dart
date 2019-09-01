@@ -18,7 +18,6 @@ createStore() async {
     remoteDevtools.store = store;
     return store;
   } else {
-    return Store<AppState>(appReducer,
-        initialState: AppState.initial(), middleware: [thunkMiddleware]);
+    return Store<AppState>(appReducer, initialState: AppState.initial(),middleware: [thunkMiddleware]);
   }
 }
